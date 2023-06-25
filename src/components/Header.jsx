@@ -3,6 +3,7 @@ import MenuItems from "./menuItems";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsInfoCircle } from "react-icons/bs";
 import Link from "next/link";
+import ThemeSwitch from "./ThemeSwitch";
 
 function Header() {
   return (
@@ -12,10 +13,11 @@ function Header() {
         <MenuItems title={"About"} link={"/about"} Icon={BsInfoCircle} />
       </div>
 
-      <div className="flex mx-4 my-auto ">
+      <div className="flex mx-4 my-auto space-x-5">
+        <ThemeSwitch />
         <Link href={"/"}>
           <h2 className="text-2xl">
-            <span className="font-bold text-white-200 bg-amber-500 py-1 px-2 rounded-lg">
+            <span className="font-bold text-white-200 bg-amber-500 py-1 px-2 rounded-lg mr-1">
               IMDb
             </span>{" "}
             <span className="text-xl hidden sm:inline">Clone</span>
